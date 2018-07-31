@@ -1,5 +1,5 @@
 {
-  "name": "oak-platform",
+  "name": "@oaklabs/platform",
   "version": "0.0.1",
   "description": "easily communicate with the OakOS Platform APIs",
   "main": "index.js",
@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/OakLabsInc/node-oak-platform#readme",
   "dependencies": {
+    "@oaklabs/platform-protos": "~2.1.3",
     "findit": "~2.0.0",
     "grpc": "~1.12.3",
     "lodash": "~4.17.10",

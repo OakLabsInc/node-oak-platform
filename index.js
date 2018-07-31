@@ -6,11 +6,10 @@ const grpc = require('grpc')
 const _ = require('lodash')
 const readdirAsync = promisify(readdir)
 
-const PROTOS_BASE = join(__dirname, 'platform-protos')
+const PROTOS_BASE = join(__dirname, 'node_modules', '@oaklabs', 'platform-protos')
 
 class OakPlatform {
   constructor ({ host = 'localhost:443', root, priv, chain }) {
-
     // create insecure credentials if we have no credential files
     const credentials = (root && priv && chain) ? grpc.credentials.createSsl(root, priv, chain) : grpc.credentials.createInsecure()
 
