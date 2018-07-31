@@ -1,6 +1,6 @@
 {
   "name": "@oaklabs/platform",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "easily communicate with the OakOS Platform APIs",
   "main": "index.js",
   "scripts": {
