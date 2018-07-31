@@ -6,7 +6,7 @@ const grpc = require('grpc')
 const _ = require('lodash')
 const readdirAsync = promisify(readdir)
 
-const PROTOS_BASE = join(__dirname, 'node_modules', '@oaklabs', 'platform-protos')
+const PROTOS_BASE = join(module.paths[0], '@oaklabs', 'platform-protos')
 
 class OakPlatform {
   constructor ({ host = 'localhost:443', root, priv, chain }) {
