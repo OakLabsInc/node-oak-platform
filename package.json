@@ -1,10 +1,11 @@
 {
   "name": "@oaklabs/platform",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "easily communicate with the OakOS Platform APIs",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/tape test/app.test.js"
+    "test": "./node_modules/.bin/tape test/app.test.js",
+    "postinstall": "git submodule update --init"
   },
   "engines": {
     "node": ">=9.3.x"
