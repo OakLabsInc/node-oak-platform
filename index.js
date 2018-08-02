@@ -22,7 +22,9 @@ class OakPlatform {
         // get the constructed proto
         let protoObj = await getProtoObject(protoPath)
         // use the proto file name as the key
-        let protoName = protoPath.replace('.proto', '')
+        let protoName = _.camelCase(
+          protoPath.replace('.proto', '')
+        )
         // let it sit undefined if there is an error
         if (_.isError(protoObj)) {
           result[protoName] = undefined
