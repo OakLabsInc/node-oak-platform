@@ -18,7 +18,7 @@ class OakPlatform {
       let protoFiles = await getProtoFiles()
       // reduce those proto files to keyed object
       let res = await Promise.all(protoFiles.map(async (protoPath) => {
-        let result = {}
+        let result = { _original: {} }
         // get the constructed proto
         let protoObj = await getProtoObject(protoPath)
         // use the proto file name as the key
@@ -35,6 +35,8 @@ class OakPlatform {
           let final = await connect(host, credentials, protoObj)
           return final
         }
+
+        result._original[protoName] = protoObj
 
         return result
       }))
