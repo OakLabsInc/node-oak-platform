@@ -9,7 +9,7 @@ const readdirAsync = promisify(readdir)
 const PROTOS_BASE = join(__dirname, 'platform-protos')
 
 class OakPlatform {
-  constructor ({ host = 'localhost:443', root, priv, chain }) {
+  constructor ({ host = 'localhost:443', root, priv, chain } = {}) {
     // create insecure credentials if we have no credential files
     const credentials = (root && priv && chain) ? grpc.credentials.createSsl(root, priv, chain) : grpc.credentials.createInsecure()
 
@@ -18,7 +18,7 @@ class OakPlatform {
       let protoFiles = await getProtoFiles()
       // reduce those proto files to keyed object
       let res = await Promise.all(protoFiles.map(async (protoPath) => {
-        let result = { _original: {} }
+        let result = {}
         // get the constructed proto
         let protoObj = await getProtoObject(protoPath)
         // use the proto file name as the key
@@ -36,7 +36,9 @@ class OakPlatform {
           return final
         }
 
-        result._original[protoName] = protoObj
+        _.assign(result[protoName], {
+          proto: protoObj
+        })
 
         return result
       }))
