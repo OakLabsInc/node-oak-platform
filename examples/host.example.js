@@ -10,10 +10,6 @@ async function go () {
     if (err) throw err
     console.log('\n* Host info:', JSON.stringify(hostInfo, null, 2), '\n')
   })
-  host.listModules(undefined, function (err, { modules }) {
-    if (err) throw err
-    console.log('* Modules:', JSON.stringify(modules, null, 2), '\n')
-  })
 }
 
 go()
