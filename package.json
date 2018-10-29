@@ -1,14 +1,13 @@
 {
   "name": "@oaklabs/platform",
-  "version": "1.3.0",
+  "version": "4.3.9",
   "description": "easily communicate with the OakOS Platform APIs",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/tape test/app.test.js",
     "prepublish": "git submodule update --init"
   },
   "engines": {
-    "node": ">=9.3.x"
+    "node": ">=10.2.x"
   },
   "repository": {
     "type": "git",
@@ -21,11 +20,8 @@
   },
   "homepage": "https://github.com/OakLabsInc/node-oak-platform#readme",
   "dependencies": {
-    "findit": "~2.0.0",
-    "grpc": "~1.15.0",
-    "lodash": "~4.17.10",
-    "pump": "~3.0.0",
-    "through2": "~2.0.3"
+    "lodash": "~4.17.11",
+    "quick-grpc": "~1.0.0"
   },
   "keywords": [
     "oak",
@@ -34,9 +30,5 @@
     "kiosks",
     "kiosk",
     "os"
-  ],
-  "devDependencies": {
-    "standard": "~11.0.1",
-    "tape": "~4.9.1"
-  }
+  ]
 }
