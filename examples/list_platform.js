@@ -10,12 +10,12 @@ async function go () {
   console.log('Platform methods:')
   Object.keys(platform).forEach(v => {
     console.log(`* ${v}`)
-    Object.keys(platform[v].proto).forEach(v => {
+    Object.keys(platform[v].definition).forEach(v => {
       console.log(`  * ${v}`)
     })
     let upper = _.startCase(v).replace(/\s/g, '')
-    if (platform[v].proto[upper]) {
-      Object.keys(platform[v].proto[upper].service).forEach(v => {
+    if (platform[v].definition[upper]) {
+      Object.keys(platform[v].definition[upper].service).forEach(v => {
         console.log(`    * ${v}`)
       })
     }
