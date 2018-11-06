@@ -1,6 +1,6 @@
 {
   "name": "@oaklabs/platform",
-  "version": "4.3.10",
+  "version": "4.3.11",
   "description": "easily communicate with the OakOS Platform APIs",
   "main": "index.js",
   "scripts": {
@@ -27,7 +27,6 @@
     "oak",
     "oaklabs",
     "zivelo",
-    "kiosks",
     "kiosk",
     "os"
   ]
