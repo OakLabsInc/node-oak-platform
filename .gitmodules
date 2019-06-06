@@ -1,4 +1,4 @@
 [submodule "platform-protos"]
 	path = platform-protos
-	branch = master
+	branch = v5
 	url = git@github.com:OakLabsInc/platform-protos.git
